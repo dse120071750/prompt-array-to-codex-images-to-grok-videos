@@ -20,7 +20,8 @@ jobs:
           path: .m8m-harness-builder
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          # The pinned M8M builder uses PEP 701 f-string syntax.
+          python-version: "3.12"
       - uses: actions/setup-node@v4
         with:
           node-version: "22"

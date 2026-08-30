@@ -41,7 +41,7 @@ current run's `chosen-output.json` bundles.
 
 - Codex with the built-in `image_gen` and `view_image` tools.
 - [M8M Harness Builder 2.0](https://github.com/dse120071750/m8m-harness-builder).
-- Python 3.10 or newer.
+- Python 3.12 or newer (required by the current M8M Harness Builder).
 - Node.js and npm, used only to install repository-local FFmpeg and ffprobe
   binaries.
 - Grok Build installed and authenticated with `grok login`.
