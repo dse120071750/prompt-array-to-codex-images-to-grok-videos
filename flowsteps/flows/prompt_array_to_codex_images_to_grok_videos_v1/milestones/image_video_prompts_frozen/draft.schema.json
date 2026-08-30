@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "image_video_prompts_frozen.draft.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["count", "prompts"],
+  "properties": {
+    "count": {"type": "integer", "minimum": 1},
+    "prompts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 300,
+        "pattern": "^In a 3-second vertical 9:16 clip,"
+      }
+    }
+  }
+}

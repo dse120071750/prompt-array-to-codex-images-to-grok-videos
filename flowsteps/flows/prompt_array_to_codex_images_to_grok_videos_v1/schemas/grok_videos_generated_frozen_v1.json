@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "grok_videos_generated_frozen.output.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["outputs", "receipt"],
+  "properties": {
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["videos", "receipt"],
+      "properties": {
+        "videos": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": ["id", "stable_id", "name", "path", "index", "source_prompt", "source_image_path", "source_image_sha256", "video_prompt", "sha256", "bytes", "width", "height", "duration_seconds"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^video_[0-9]{3}$"},
+              "stable_id": {"type": "string", "pattern": "^prompt-[0-9]{3}$"},
+              "name": {"type": "string", "minLength": 1},
+              "path": {"type": "string", "minLength": 1},
+              "index": {"type": "integer", "minimum": 0},
+              "source_prompt": {"type": "string", "minLength": 1},
+              "source_image_path": {"type": "string", "minLength": 1},
+              "source_image_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+              "video_prompt": {"type": "string", "minLength": 1},
+              "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+              "bytes": {"type": "integer", "minimum": 1},
+              "width": {"const": 720},
+              "height": {"enum": [1264, 1280]},
+              "duration_seconds": {"type": "number", "minimum": 2.8, "maximum": 3.2}
+            }
+          }
+        },
+        "receipt": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["schema", "transport", "session_id", "grok_version", "count", "format", "clips", "allowed_tools", "validation"],
+          "properties": {
+            "schema": {"const": "grok_image_video_batch_receipt_v1"},
+            "transport": {"const": "acp"},
+            "session_id": {"type": "string", "minLength": 1},
+            "grok_version": {"type": "string", "minLength": 1},
+            "count": {"type": "integer", "minimum": 1},
+            "format": {"type": "object"},
+            "clips": {"type": "array", "minItems": 1},
+            "allowed_tools": {"const": ["image_to_video"]},
+            "validation": {"type": "object"}
+          }
+        }
+      }
+    },
+    "receipt": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["ok", "code", "count", "session_id"],
+      "properties": {"ok": {"const": true}, "code": {"const": "pass"}, "count": {"type": "integer", "minimum": 1}, "session_id": {"type": "string", "minLength": 1}}
+    }
+  }
+}

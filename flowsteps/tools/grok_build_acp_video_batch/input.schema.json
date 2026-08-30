@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["prompt_batch", "work_dir"],
+  "properties": {
+    "prompt_batch": {
+      "type": "object",
+      "required": ["schema", "count", "format", "items"]
+    },
+    "work_dir": {"type": "string", "minLength": 1}
+  }
+}

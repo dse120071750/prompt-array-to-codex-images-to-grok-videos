@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"image_video_prompts_judge.input.schema.json","type":"object","additionalProperties":false,"required":["images","draft"],"properties":{"images":{"type":"array","minItems":1,"items":{"type":"object"}},"draft":{"type":"object"},"gem_path":{"type":"string"}}}

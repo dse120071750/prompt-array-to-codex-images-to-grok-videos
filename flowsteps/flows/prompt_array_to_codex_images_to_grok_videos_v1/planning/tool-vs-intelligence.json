@@ -1,0 +1,76 @@
+{
+  "schema": "tool_vs_intelligence_table_v1",
+  "rows": [
+    {
+      "id": "prepare_visual_prompt_batch",
+      "class": "tool",
+      "test": "same input → same action; fixture-testable; receipt not opinion; junior can implement from schema",
+      "why": "listed toolbox function for this milestone",
+      "milestone": "prompt_batch_ready",
+      "destination": "flowsteps/tools/prepare_visual_prompt_batch/"
+    },
+    {
+      "id": "codex_images_generated_frozen",
+      "class": "intelligence",
+      "test": "fails at least one of the four tests; no fixture without a model",
+      "why": "completion on milestone codex_images_generated_frozen",
+      "milestone": "codex_images_generated_frozen"
+    },
+    {
+      "id": "freeze_codex_image_batch",
+      "class": "tool",
+      "test": "same input → same action; fixture-testable; receipt not opinion; junior can implement from schema",
+      "why": "listed toolbox function for this milestone",
+      "milestone": "codex_images_generated_frozen",
+      "destination": "flowsteps/tools/freeze_codex_image_batch/"
+    },
+    {
+      "id": "codex_images_generated_judge",
+      "class": "tool",
+      "test": "same input → same action; fixture-testable; receipt not opinion; junior can implement from schema",
+      "why": "listed toolbox function for this milestone",
+      "milestone": "codex_images_generated_frozen",
+      "destination": "flowsteps/tools/codex_images_generated_judge/"
+    },
+    {
+      "id": "image_video_prompts_frozen",
+      "class": "intelligence",
+      "test": "fails at least one of the four tests; no fixture without a model",
+      "why": "completion on milestone image_video_prompts_frozen",
+      "milestone": "image_video_prompts_frozen"
+    },
+    {
+      "id": "image_video_prompts_judge",
+      "class": "tool",
+      "test": "same input → same action; fixture-testable; receipt not opinion; junior can implement from schema",
+      "why": "listed toolbox function for this milestone",
+      "milestone": "image_video_prompts_frozen",
+      "destination": "flowsteps/tools/image_video_prompts_judge/"
+    },
+    {
+      "id": "grok_build_acp_image_video_batch",
+      "class": "tool",
+      "test": "same input → same action; fixture-testable; receipt not opinion; junior can implement from schema",
+      "why": "listed toolbox function for this milestone",
+      "milestone": "grok_videos_generated_frozen",
+      "destination": "flowsteps/tools/grok_build_acp_image_video_batch/"
+    },
+    {
+      "id": "validate_grok_image_video_batch",
+      "class": "tool",
+      "test": "same input → same action; fixture-testable; receipt not opinion; junior can implement from schema",
+      "why": "listed toolbox function for this milestone",
+      "milestone": "grok_videos_generated_frozen",
+      "destination": "flowsteps/tools/validate_grok_image_video_batch/"
+    },
+    {
+      "id": "grok_image_videos_generated_judge",
+      "class": "tool",
+      "test": "same input → same action; fixture-testable; receipt not opinion; junior can implement from schema",
+      "why": "listed toolbox function for this milestone",
+      "milestone": "grok_videos_generated_frozen",
+      "destination": "flowsteps/tools/grok_image_videos_generated_judge/"
+    }
+  ],
+  "flow_id": "prompt_array_to_codex_images_to_grok_videos_v1"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "image_video_prompts_frozen.input.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["images", "image_manifest"],
+  "properties": {
+    "images": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "image_manifest": {"type": "object", "required": ["schema", "count", "items"]}
+  }
+}

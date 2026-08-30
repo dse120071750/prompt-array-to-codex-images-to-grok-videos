@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "grok_videos_generated_frozen.input.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["prompt_batch", "images", "image_manifest", "video_prompts", "video_prompt_manifest"],
+  "properties": {
+    "prompt_batch": {"type": "object", "required": ["schema", "count", "items"]},
+    "images": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "image_manifest": {"type": "object", "required": ["schema", "count", "items"]},
+    "video_prompts": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "video_prompt_manifest": {"type": "object", "required": ["schema", "count", "items"]}
+  }
+}

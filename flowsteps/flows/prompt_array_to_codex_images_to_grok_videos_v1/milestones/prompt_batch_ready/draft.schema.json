@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "prompt_batch_ready.draft.schema.json",
+  "type": "object",
+  "additionalProperties": true
+}

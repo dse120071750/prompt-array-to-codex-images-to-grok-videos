@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"codex_images_generated_judge.input.schema.json","type":"object","additionalProperties":false,"required":["prompt_batch","frozen"],"properties":{"prompt_batch":{"type":"object"},"frozen":{"type":"object"},"gem_path":{"type":"string"}}}

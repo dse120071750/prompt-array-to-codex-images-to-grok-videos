@@ -1,0 +1,60 @@
+[
+  {
+    "milestone": "prompt_batch_ready",
+    "intelligence": "none",
+    "intelligence_note": "",
+    "existing": [
+      "prepare_visual_prompt_batch"
+    ],
+    "promote": [],
+    "generate": [],
+    "tools": [
+      "prepare_visual_prompt_batch"
+    ]
+  },
+  {
+    "milestone": "codex_images_generated_frozen",
+    "intelligence": "completion",
+    "intelligence_note": "",
+    "existing": [
+      "freeze_codex_image_batch",
+      "codex_images_generated_judge"
+    ],
+    "promote": [],
+    "generate": [],
+    "tools": [
+      "freeze_codex_image_batch",
+      "codex_images_generated_judge"
+    ]
+  },
+  {
+    "milestone": "image_video_prompts_frozen",
+    "intelligence": "completion",
+    "intelligence_note": "",
+    "existing": [
+      "image_video_prompts_judge"
+    ],
+    "promote": [],
+    "generate": [],
+    "tools": [
+      "image_video_prompts_judge"
+    ]
+  },
+  {
+    "milestone": "grok_videos_generated_frozen",
+    "intelligence": "none",
+    "intelligence_note": "",
+    "existing": [
+      "grok_build_acp_image_video_batch",
+      "validate_grok_image_video_batch",
+      "grok_image_videos_generated_judge"
+    ],
+    "promote": [],
+    "generate": [],
+    "tools": [
+      "grok_build_acp_image_video_batch",
+      "validate_grok_image_video_batch",
+      "grok_image_videos_generated_judge"
+    ]
+  }
+]

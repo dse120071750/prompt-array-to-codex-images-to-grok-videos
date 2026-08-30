@@ -1,0 +1,36 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check out pinned M8M Harness Builder
+        uses: actions/checkout@v4
+        with:
+          repository: dse120071750/m8m-harness-builder
+          ref: cab776255df1a880144cd8a2713d912fe20083fc
+          path: .m8m-harness-builder
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: pip install -r requirements.txt
+      - run: npm ci
+      - name: Validate M8M v4 harness
+        run: >-
+          python .m8m-harness-builder/scripts/validate_harness.py
+          --codebase .
+          --flow-id prompt_array_to_codex_images_to_grok_videos_v1
+      - name: Run unit tests
+        run: python scripts/run_tests.py

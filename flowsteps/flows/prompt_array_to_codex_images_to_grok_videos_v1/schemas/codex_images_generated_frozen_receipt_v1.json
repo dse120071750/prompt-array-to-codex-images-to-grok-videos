@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "codex_images_generated_frozen_receipt_v1.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["ok", "code", "count", "provider"],
+  "properties": {"ok": {"const": true}, "code": {"const": "pass"}, "count": {"type": "integer", "minimum": 1}, "provider": {"const": "codex_builtin_imagegen"}}
+}

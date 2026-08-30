@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "codex_images_generated_frozen.input.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["prompt_batch"],
+  "properties": {
+    "prompt_batch": {
+      "type": "object",
+      "required": ["schema", "count", "image", "video", "items"],
+      "properties": {"schema": {"const": "visual_prompt_batch_v1"}, "items": {"type": "array", "minItems": 1}}
+    }
+  }
+}

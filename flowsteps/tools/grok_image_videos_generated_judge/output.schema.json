@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"grok_image_videos_generated_judge.output.schema.json","type":"object","additionalProperties":true,"required":["ok","code","count","session_id"],"properties":{"ok":{"const":true},"code":{"const":"pass"},"count":{"type":"integer","minimum":1},"session_id":{"type":"string","minLength":1}}}
